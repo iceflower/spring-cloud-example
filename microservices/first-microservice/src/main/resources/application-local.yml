@@ -1,0 +1,14 @@
+spring:
+  config:
+    import: "optional:configserver:http://localhost:8762"
+  cloud:
+    config:
+      enabled: true
+      name: ${spring.application.name}
+      profile: local
+# 클라이언트 코드에서 Actuator 설정
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,9 @@
+server:
+  port: 8761
+
+# actuator 기본 설정
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
