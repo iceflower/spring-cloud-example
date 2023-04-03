@@ -1,7 +1,5 @@
 package org.microservice.third.controller;
 
-import com.netflix.discovery.shared.Application;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.microservice.third.service.GetMsaCustomizeValueService;
 import org.springframework.web.bind.annotation.GetMapping;
