@@ -1,0 +1,3 @@
+org.microservice.base.config.EurekaStatusInitializer
+org.microservice.base.config.CloudConfigClientWatch
+org.microservice.base.config.CloudConfigClientWatchConfiguration

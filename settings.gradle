@@ -1,0 +1,13 @@
+rootProject.name = 'spring-cloud-examples'
+
+// spring cloud 환경 제공용 모듈
+include ':msa-env-provider:admin-server'
+include ':msa-env-provider:config-server'
+include ':msa-env-provider:service-discovery-server'
+
+// spring cloud 환경에서 작동하는 MSA 및 MSA의 공통모듈
+include ':microservices:base-module'
+include ':microservices:first-microservice'
+include ':microservices:second-microservice'
+include ':microservices:third-microservice'
+

@@ -1,0 +1,13 @@
+server:
+  http2:
+    enabled: true
+  shutdown: graceful
+
+spring:
+  application:
+    name: service-discovery-server
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
