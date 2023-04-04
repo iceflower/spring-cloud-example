@@ -18,24 +18,15 @@ public class SlowService {
     this.circuitBreaker = circuitBreakerFactory.create("slow-cb");
   }
 
-  public String getFirstValue(final String appName) {
+  public String getAppName(final String appName, final int second) {
 
     return circuitBreaker.run(() -> {
-      final var uri = URI.create(String.format("https://%s/custom-value/first", appName));
+      final var uri = URI.create(
+        String.format("https://%s/slow/get-app-name/%d", appName, second));
 
       return restTemplate.getForEntity(uri, String.class)
         .getBody();
-    }, throwable -> "default first value");
+    }, throwable -> "failed to get app name");
 
-  }
-
-
-  public String getSecondValue(final String appName) {
-    return circuitBreaker.run(() -> {
-      final var uri = URI.create(String.format("https://%s/custom-value/second", appName));
-
-      return restTemplate.getForEntity(uri, String.class)
-        .getBody();
-    }, throwable -> "default second value");
   }
 }
