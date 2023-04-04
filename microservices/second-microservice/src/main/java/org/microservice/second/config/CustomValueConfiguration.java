@@ -9,13 +9,10 @@ import org.springframework.context.annotation.Configuration;
 @Getter
 @RefreshScope
 public class CustomValueConfiguration {
-  private final String myFirstCustomValue;
-  private final String mySecondCustomValue;
 
-  public CustomValueConfiguration(
-    @Value("${custom-value.first}") String myFirstCustomValue,
-    @Value("${custom-value.second}") String mySecondCustomValue) {
-    this.myFirstCustomValue = myFirstCustomValue;
-    this.mySecondCustomValue = mySecondCustomValue;
-  }
+  @Value("${custom-value.first}")
+  private String myFirstCustomValue;
+  @Value("${custom-value.second}")
+  private String mySecondCustomValue;
+
 }

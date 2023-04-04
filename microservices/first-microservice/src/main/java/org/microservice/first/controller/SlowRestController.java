@@ -12,7 +12,7 @@ public class SlowRestController {
 
   private final String myName;
 
-  public SlowRestController(@Value("spring.application.name") String myName) {
+  public SlowRestController(@Value("${spring.application.name}") String myName) {
     this.myName = myName;
   }
 
